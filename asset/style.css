@@ -1,0 +1,505 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;500&family=Ubuntu:wght@300&display=swap');
+
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+:root{
+
+    --blue:#287bff;
+    --white:#fff;
+    --grey:#f5f5f5;
+    --black1:#222;
+    --black2:#999;
+
+}
+
+body{
+
+    min-height: 100vh;
+    overflow-x: hidden;
+
+}
+
+.container{
+
+    position: relative;
+    width: 100%;
+
+}
+
+.navigation{
+
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background-color: var(--blue);
+    border-left: 10px solid var(--blue);
+    transform: 0.5s;
+    overflow: hidden;
+}
+
+.navigation.active{  
+    width: 80px;
+    
+}
+
+.navigation ul
+{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.navigation ul li
+{
+
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.navigation ul li:hover,
+.navigation ul li.hovered
+{
+
+  background-color: var(--white);
+  
+}
+
+
+
+.navigation ul li:nth-child(1)
+{
+
+   margin-bottom: 40px;
+   pointer-events: none;
+}
+
+.navigation ul li a
+{
+
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: var(--white);
+}
+
+.navigation ul li:hover a ,
+.navigation ul li.hovered a
+{
+
+    color: var(--blue);
+}
+
+.navigation ul li a .icon
+{
+
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 75px;
+    text-align: center;
+}
+
+.navigation ul li a .icon ion-icon
+{
+
+        font-size: 1.75em;
+
+}
+
+.navigation ul li a .title
+{
+
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowsrap;
+}
+
+/* ******* */
+
+.navigation ul li:hover a::before ,
+.navigation ul li.hovered a::before 
+{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -50px;
+    width: 50px;
+    height: 50px;
+    background: transparent ;
+    border-radius: 50%;
+    box-shadow: 35px 35px 0 10px var(--white);
+    pointer-events: none;
+}
+
+.navigation ul li:hover a::after,
+.navigation ul li.hovered a::after
+{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+    width: 50px;
+    height: 50px;
+    background: transparent ;
+    border-radius: 50%;
+    box-shadow: 35px -35px 0 10px var(--white);
+    pointer-events: none;
+}
+
+
+
+/* main */
+
+
+.main
+{
+
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+    min-height: 100vh;
+    background-color: var(--white);
+    transform: 0.5s;
+
+}
+
+.main.active
+{
+    width: calc(100% - 80px);
+    left: 80px;
+}
+
+
+.topbar
+{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.toggle
+{
+
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    cursor: pointer;
+}
+
+.search
+{
+    position: relative;
+    width: 400px;
+    margin: 0 10px;
+}
+
+.search label
+{
+    position: relative;
+    width: 100%;
+    
+}
+
+.search label input
+{
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    padding: 5px 20px;
+    padding-left: 35px;
+    font-size: 18px;
+    outline: none;
+    border: 1px solid var(--black2);   
+}
+
+.search label ion-icon
+{
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    font-size: 1.2em; 
+}
+
+
+.user
+{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer; 
+}
+
+.user img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* table */
+
+.details
+{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+}
+
+.details .usersDetails
+{
+    position: relative;
+    display: grid;
+    min-height: 500px;
+    background-color: var(--white);
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+}
+
+.tableHeader
+{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start
+
+}
+
+.tableHeader h2
+{
+
+    font-weight: 600;
+    color: var(--blue);
+
+}
+.btn{
+
+    position: relative;
+    padding: 5px 10px;
+    background: var(--blue);
+    text-decoration: none;
+    color: var(--white);
+    border-radius: 6px;
+    border: 0;
+    cursor: pointer;
+}
+
+.details table{
+
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.details table thead td{
+
+   font-weight: 600;
+}
+
+.details .usersDetails table tr{
+
+    color: var(--black1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+ }
+ .details .usersDetails table tr:last-child{
+     border-bottom: none;
+     pointer-events: none;
+ }
+
+ .details .usersDetails table tbody tr:hover{
+
+    color: var(--white);
+    background: var(--blue);
+
+ }
+th, td
+ {
+  text-align: left;
+  padding: 10px
+}
+
+.details .usersDetails table td{
+
+    padding: 10px;
+ }
+ .details .usersDetails table tr td:last-child{
+
+    text-align: end;
+ }
+ .details .usersDetails table tr :last-child{
+
+    text-align: end;
+ }
+
+
+ /* Add User */
+
+ .addUserCard {
+
+    position: absolute;
+    background-color: var(--white);
+    display:none;
+    width: 600px;
+    height: 450px;
+    left: 22%;
+    top: 12%;
+    border-radius: 6px;
+    z-index: 2;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}  
+
+.addComptionCard{
+
+    position: absolute;
+    background-color: var(--white);
+    display:block;
+    width: 400px;
+    height: 300px;
+    left: 42%;
+    top: 20%;
+    border-radius: 21px;
+    z-index: 2;
+
+
+}
+.flexDetails{
+
+    display: flex;
+    flex-direction: column;
+    margin: 7px;
+ }
+
+form .flexDetails input{
+
+    width: 250px;
+    height: 26px;
+    
+}
+.flexDetailsInput {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flexDetailsInputComption{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.flexDetailsComption {
+
+    margin: 10px 0;
+
+}
+.flexDetailsIcon
+{
+    position: absolute;
+    top: 80%;
+    left: 92%;
+    font-size: 1.5em;
+
+}
+.contenar{
+
+    padding: 20px;
+    
+ }
+ .AouqphDetailsTitle,.userDetailsTitle ,.ComptionDetailsTitle{
+
+    border-bottom: 1px solid var(--black2);
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+ }
+
+ .userDetailsTitle ion-icon ,.ComptionDetailsTitle ion-icon{
+
+   font-size: 1.5em;
+   cursor: pointer;
+ }
+.AouqphDetailsTitle {
+
+    margin-top: 20px;
+   
+}
+.userDetailsTitle ,.ComptionDetailsTitle{
+
+    margin-top: 5px;
+
+}
+
+.overlay{
+
+    /* background-color: #7e3af2; */
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.5); 
+    z-index: 1; /* Specify a stack order in case you're using a different order for other elements */
+    
+
+}
+
+.saveIcon ,.saveIconComption{
+
+    position: absolute;
+    left: 90%;
+    top: 90%;
+    font-size: 1.5em;
+ 
+  }
+
+   ion-icon 
+  {
+    cursor: pointer;
+  }
+
+/* 
+  .saveIconComption{
+
+    position: absolute;
+    left: 84%;
+    top: 83%;
+    font-size: 1.5em;
+    cursor: pointer;
+  } */
