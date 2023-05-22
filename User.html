@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="asset/style.css">
-    <title>User Management</title>
+    <title>profile</title>
     <link rel="icon" type="image/png" href="asset/image/quranLoge.png">
 </head>
 <body>
@@ -20,21 +20,9 @@
                     </a>
                 </li>
                 <li>
-                    <a href="index.html">
+                    <a href="User.html">
                         <span class="icon" ><ion-icon name="home-outline"></ion-icon></span>
-                        <span class="title" >User Managment</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="competitionManagment.html">
-                        <span class="icon" ><ion-icon name="library-outline"></ion-icon></span>
-                        <span class="title" >Competition Managment</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="help.html">
-                        <span class="icon" ><ion-icon name="help-outline"></ion-icon></span>
-                        <span class="title" >Help</span>
+                        <span class="title" >profile</span>
                     </a>
                 </li>
                 <li>
@@ -72,55 +60,96 @@
 
             
             <div class="tabe" >
-                <a href="#" class="userTabe" >Users</a>
-                <a href="#" class="archiveTabe" >Archive</a>
+                <div class="card" >
+                    <h3>Ramadan</h3>
+                    <p>
+                        Expiry date : 15/8/2023
+                    </p>
+                    <p>
+                        Contest date : 31/8/2023
+                    </p>
+                    <span>New</span>
+                </div>
             </div>
 
-            <div class="details usersTable" >
-
+            <div class="details" >
                 <div class="usersDetails">
-                  
-
                     <div class="tableHeader">
-                        <h2 style="font-weight: bold;" >Users</h2>
-                        <button href="" class="btn " >Add User</button>
+                        <h2>Users</h2>
+                        
                     </div>
-
-
-                    <table class="userTable"  >
+                    <table>
                         <thead>
                             <tr>
-                                <th>User name</th>
-                                <th>Almasijed</th>
-                                <th>supervisor</th>
-                                <th class="rowWidth" ></th>
+                              <th>Name Competition</th>
+                              <th>Part</th>
+                              <th>Mark</th>
+                              <th >Date</th>
                             </tr>
                         </thead>
-                        <tbody class="parantTr" >
-                            <tr class="hoverEvent" onclick="redirect();" >
-                                <td>Aya AbuAlnasser</td>
-                                <td>omar</td>
-                                <td>nour</td>
-                                <td class="tableIcon" >
-                                <img height="25" width="25" src="https://img.icons8.com/emoji/48/null/check-mark-emoji.png"/>
-                                <img height="25" width="25" src="https://img.icons8.com/color/48/null/delete-sign--v1.png"/>
-                                </td>
-                            </tr>
-                            
-                             <tr>
-                                <th colspan="3" > SHOWING 21-30 OF 100</th>
-                                <th class="hoverEvent arrowsIcon " >
-                                    <ion-icon name="chevron-back-outline"></ion-icon>
-                                    <ion-icon name="chevron-forward-outline"></ion-icon>
-                                </th>
-                            </tr>
+                        <tbody>
+                          <tr class="hoverEvent" onclick="addMark();" >
+                            <td>Ramadan</td>
+                            <td>8/7/6</td>
+                            <td>70</td>
+                            <td>20/8/2012</td>
+                          </tr>
+                          <tr class="hoverEvent" onclick="addMark();">
+                            <td>Almaouled</td>
+                            <td>1/2/3</td>
+                            <td>90</td>
+                            <td>9/5/2022</td>
+                          </tr>
+                          <tr class="hoverEvent" onclick="addMark();">
+                            <td>Febrier</td>
+                            <td>1/2/3/4/5</td>
+                            <td>95</td>
+                            <td>12/2/2022</td>
+                          </tr>
+                          <tr class="hoverEvent" onclick="addMark();">
+                            <td>March</td>
+                            <td>First10</td>
+                            <td>83</td>
+                            <td>3/9/2017</td>
+                          </tr>
+                          <tr class="hoverEvent" onclick="addMark();">
+                            <td>Ramadan</td>
+                            <td>Finel5</td>
+                            <td>98</td>
+                            <td>21/9/2019</td>
+                          </tr>
+                          <tr class="hoverEvent" onclick="addMark();">
+                            <td>Ramadan</td>
+                            <td>Finel5</td>
+                            <td>98</td>
+                            <td>21/9/2019</td>
+                          </tr>
+                          <tr class="hoverEvent" onclick="addMark();">
+                            <td>Ramadan</td>
+                            <td>Finel5</td>
+                            <td>98</td>
+                            <td>21/9/2019</td>
+                          </tr>
+                          <tr class="hoverEvent" onclick="addMark();">
+                            <td>Ramadan</td>
+                            <td>Finel5</td>
+                            <td>98</td>
+                            <td>21/9/2019</td>
+                          </tr>
+                          <tr>
+                            <th colspan="3" > SHOWING 21-30 OF 100</th>
+                            <th class="hoverEvent arrowsIcon" >
+                              <img height="25" width="25" src="https://img.icons8.com/sf-black/64/null/back.png"/>
+                              <img height="25" width="25" src="https://img.icons8.com/sf-black/64/null/forward.png"/>
+                            </th>
+                        </tr>
                         </tbody>
                     </table>
-
 
                 </div>
 
             </div>
+
 
 
 
@@ -232,64 +261,40 @@
 
                     <!-- addUserCard  -->
      
-     
-                    <div class="addUserCard contenar" >
-                      <div class=" userDetailsTitle " >
-                          <h3 style="font-weight: bold; color: #005937;">User Details</h3>
-                          <div class="closeCard"onclick="closeCard();">
-                            <ion-icon name="close-outline"  ></ion-icon>
-                          </div>
-                         
-                      </div>      
-                      <div class="userDetails  " >
-                    
-                          <form action="" class="flexDetailsInput">
-                              <div class="flexDetails" >
-                                  <label for="">User Name :</label>
-                                  <input type="text" id="textUserName">
-                              </div>
-                              <div class="flexDetails" >
-                                  <label for="">Almasijed :</label>
-                                  <input type="text" id="textAlmasijed">
-                              </div>
-                              <div class="flexDetails" >
-                                  <label for="">Supervisor :</label>
-                                  <input type="text"id="textSupervisor">
-                              </div>
-                              <div class="flexDetails" >
-                                  <label for="">Password :</label>
-                                  <input type="text"id="numPassword">
-                              </div>
-                              <div class="flexDetails" >
-                                  <label for="">Conffer :</label>
-                                  <input type="text" id="textConffer">
-                              </div>
-                          </form>
-                        </div>
-                        <div class=" AouqphDetailsTitle " >
-                          <h3>Aouqph Details</h3>
+                    <div class=" contenar addComptionCard"  >
+                        <div class=" userDetailsTitle " >
+                            <h3 style="font-weight: bold; color: #005937;">New Competition</h3>
+                            <div class="closeCard"onclick="closeCard();">
+                              <ion-icon name="close-outline"  ></ion-icon>
+                            </div>
+                           
                         </div>      
-                        <div class="AouqphDetails" >
+                        <div class="userDetails  " >
+                      
                             <form action="" class="flexDetailsInput">
                                 <div class="flexDetails" >
-                                    <label for="">Part</label>
-                                    <input type="text"id="textPart">
+                                    <label for="">Competition Name :</label>
+                                    <input type="text">
                                 </div>
                                 <div class="flexDetails" >
-                                    <label for="">Date</label>
-                                    <input type="text"id="numDate">
+                                    <label for="">Expiry date :</label>
+                                    <input type="date">
                                 </div>
-                                <div class=" flexDetailsIcon " >
-                                    <ion-icon name="add-circle-outline"></ion-icon>
-                                </div>
-                                <div class="saveIcon" >
-                                    <ion-icon name="save-outline"id="saveIcon"></ion-icon>
+                                <div class="flexDetails" >
+                                    <label for="">Contest date  :</label>
+                                    <input type="date">
                                 </div>
                             </form>
-                    
-                        </div>
-                    </div>
-
+                          </div>      
+                          <div class="AouqphDetails" >
+                              
+                                  <div class="saveIcon" >
+                                      <ion-icon name="save-outline"></ion-icon>
+                                  </div>
+                      
+                          </div>
+                      </div>
+               
         </div>
 
 
@@ -300,5 +305,15 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="asset/JS.js" ></script>
+    <script>
+
+
+
+
+
+
+
+    </script>
+
 </body>
 </html>

@@ -13,9 +13,9 @@
         <div class="navigation" >
             <ul>
                 <li>
-                    <a href="#">
-                        <span class="icon" ><ion-icon name="logo-html5"></ion-icon></span>
-                        <span class="title" >Quran competition</span>
+                    <a href="#"  class="loge">
+                        <span class="icon" ><img src="asset/image/quranLoge.jpg"alt="" height="50" width="50"></span>
+                        <span class="title logo" >Quran competition</span>
                     </a>
                 </li>
                 <li>
@@ -83,47 +83,47 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="hoverEvent" onclick="redirectComp();" >
+                            <tr class="hoverEvent" onclick="addMark(event)" >
                                 <td>Aya AbuAlnasser</td>
                                 <td>5/6/7</td>
                                 <td>10</td>
                             </tr>
-                            <tr class="hoverEvent" onclick="redirectComp();" >
+                            <tr class="hoverEvent" onclick="addMark;" >
                                 <td>Aya AbuAlnasser</td>
                                 <td>5/6/7</td>
                                 <td>10</td>
                             </tr>
-                            <tr class="hoverEvent" onclick="redirectComp();" >
+                            <tr class="hoverEvent" onclick="addMark" >
                                 <td>Aya AbuAlnasser</td>
                                 <td>5/6/7</td>
                                 <td>10</td>
                             </tr>
-                            <tr class="hoverEvent" onclick="redirectComp();" >
+                            <tr class="hoverEvent" onclick="addMark" >
                                 <td>Aya AbuAlnasser</td>
                                 <td>5/6/7</td>
                                 <td>10</td>
                             </tr>
-                            <tr class="hoverEvent" onclick="redirectComp();" >
+                            <tr class="hoverEvent" onclick="addMark" >
                                 <td>Aya AbuAlnasser</td>
                                 <td>5/6/7</td>
                                 <td>10</td>
                             </tr>
-                            <tr class="hoverEvent" onclick="redirectComp();" >
+                            <tr class="hoverEvent" onclick="addMark" >
                                 <td>Aya AbuAlnasser</td>
                                 <td>5/6/7</td>
                                 <td>10</td>
                             </tr>
-                            <tr class="hoverEvent" onclick="redirectComp();" >
+                            <tr class="hoverEvent" onclick="addMark" >
                                 <td>Aya AbuAlnasser</td>
                                 <td>5/6/7</td>
                                 <td>10</td>
                             </tr>
-                            <tr class="hoverEvent" onclick="redirectComp();" >
+                            <tr class="hoverEvent" onclick="addMark" >
                                 <td>Aya AbuAlnasser</td>
                                 <td>5/6/7</td>
                                 <td>10</td>
                             </tr>
-                            <tr class="hoverEvent" onclick="redirectComp();" >
+                            <tr class="hoverEvent" onclick="addMark" >
                                 <td>Aya AbuAlnasser</td>
                                 <td>5/6/7</td>
                                 <td>10</td>
@@ -153,10 +153,10 @@
                     <!-- addUserCard  -->
      
      
-                    <div class="addUserCard contenar" >
+                    <div class="addMarkCard contenar " >
                       <div class=" userDetailsTitle " >
-                          <h3>User Details</h3>
-                          <div class="closeCard"onclick="closeCard();">
+                          <h3>Add Mark</h3>
+                          <div class="closeCard"onclick="offaddMark();">
                             <ion-icon name="close-outline"  ></ion-icon>
                           </div>
                          
@@ -165,43 +165,15 @@
                     
                           <form action="" class="flexDetailsInput">
                               <div class="flexDetails" >
-                                  <label for="">User Name :</label>
+                                  <label for="">Mark :</label>
                                   <input type="text">
                               </div>
-                              <div class="flexDetails" >
-                                  <label for="">Almasijed :</label>
-                                  <input type="text">
-                              </div>
-                              <div class="flexDetails" >
-                                  <label for="">supervisor :</label>
-                                  <input type="text">
-                              </div>
-                              <div class="flexDetails" >
-                                  <label for="">Password :</label>
-                                  <input type="text">
-                              </div>
-                              <div class="flexDetails" >
-                                  <label for="">Conffer :</label>
-                                  <input type="text">
-                              </div>
+                           
                           </form>
                         </div>
-                        <div class=" AouqphDetailsTitle " >
-                          <h3>Aouqph Details</h3>
-                        </div>      
+                            
                         <div class="AouqphDetails" >
                             <form action="" class="flexDetailsInput">
-                                <div class="flexDetails" >
-                                    <label for="">Part</label>
-                                    <input type="text">
-                                </div>
-                                <div class="flexDetails" >
-                                    <label for="">Date</label>
-                                    <input type="text">
-                                </div>
-                                <div class=" flexDetailsIcon " >
-                                    <ion-icon name="add-circle-outline"></ion-icon>
-                                </div>
                                 <div class="saveIcon" >
                                     <ion-icon name="save-outline"></ion-icon>
                                 </div>
@@ -220,5 +192,21 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="asset/JS.js" ></script>
+    <script>
+        function addMark(e) {
+            console.log(e.target);
+            onaddMark();
+        };
+            
+        function onaddMark() {
+                document.querySelector(".overlay").style.display = "block";
+                document.querySelector(".addMarkCard").style.display = "block";
+        };
+            
+        function offaddMark() {
+                document.querySelector(".overlay").style.display = "none";
+                document.querySelector(".addMarkCard").style.display = "none";
+        };
+    </script>
 </body>
 </html>

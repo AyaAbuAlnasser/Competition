@@ -13,12 +13,12 @@
       <div class="container" >
         <div class="navigation" >
           <ul>
-              <li>
-                  <a href="#">
-                      <span class="icon" ><ion-icon name="logo-html5"></ion-icon></span>
-                      <span class="title" >Quran competition</span>
-                  </a>
-              </li>
+            <li>
+              <a href="#"  class="loge">
+                  <span class="icon" ><img src="asset/image/quranLoge.jpg"alt="" height="50" width="50"></span>
+                  <span class="title logo" >Quran competition</span>
+              </a>
+          </li>
               <li>
                   <a href="index.html">
                       <span class="icon" ><ion-icon name="home-outline"></ion-icon></span>
@@ -74,7 +74,7 @@
 
      
             <div class="moreDetails">
-              <div class="userDetailsSection" >
+              <div class="userDetailsSection" id="template" >
                 
                   
                     <p id="UserName" class="UserName">User Name :</p>
@@ -95,7 +95,7 @@
                   <p id="supervisor" class="supervisor" >supervisor :</p>
                   <label for="supervisor" class="supervisorLabele" >Manal</label>
    
-            
+                  <ion-icon name="create-outline"  onclick="editUserDetails()"></ion-icon>
                
               </div>
              </div>
@@ -111,7 +111,7 @@
               <label for="Markd" class="MarkdLable">95</label>
               <p id="Date" class="Date" >Date :</p>
               <label for="Date" class="DateLable" >2/8/2022</label>
-              
+              <ion-icon name="create-outline" class="icon" onclick="editProbe()"></ion-icon>
             </div>
           </div>
 
@@ -133,49 +133,49 @@
                             </tr>
                         </thead>
                         <tbody>
-                          <tr>
+                          <tr class="hoverEvent" onclick="addMark();" >
                             <td>Ramadan</td>
                             <td>8/7/6</td>
                             <td>70</td>
                             <td>20/8/2012</td>
                           </tr>
-                          <tr>
+                          <tr class="hoverEvent" onclick="addMark();">
                             <td>Almaouled</td>
                             <td>1/2/3</td>
                             <td>90</td>
                             <td>9/5/2022</td>
                           </tr>
-                          <tr>
+                          <tr class="hoverEvent" onclick="addMark();">
                             <td>Febrier</td>
                             <td>1/2/3/4/5</td>
                             <td>95</td>
                             <td>12/2/2022</td>
                           </tr>
-                          <tr>
+                          <tr class="hoverEvent" onclick="addMark();">
                             <td>March</td>
                             <td>First10</td>
                             <td>83</td>
                             <td>3/9/2017</td>
                           </tr>
-                          <tr>
+                          <tr class="hoverEvent" onclick="addMark();">
                             <td>Ramadan</td>
                             <td>Finel5</td>
                             <td>98</td>
                             <td>21/9/2019</td>
                           </tr>
-                          <tr>
+                          <tr class="hoverEvent" onclick="addMark();">
                             <td>Ramadan</td>
                             <td>Finel5</td>
                             <td>98</td>
                             <td>21/9/2019</td>
                           </tr>
-                          <tr>
+                          <tr class="hoverEvent" onclick="addMark();">
                             <td>Ramadan</td>
                             <td>Finel5</td>
                             <td>98</td>
                             <td>21/9/2019</td>
                           </tr>
-                          <tr>
+                          <tr class="hoverEvent" onclick="addMark();">
                             <td>Ramadan</td>
                             <td>Finel5</td>
                             <td>98</td>
@@ -195,6 +195,49 @@
 
             </div>
 
+
+                 <!-- overlay -->
+
+
+                 <div class="overlay" >
+
+                </div>
+
+
+                <!-- addUserCard  -->
+ 
+ 
+                <div class="addMarkCard contenar " >
+                  <div class=" userDetailsTitle " >
+                      <h3>Add Mark</h3>
+                      <div class="closeCard"onclick="offaddMark();">
+                        <ion-icon name="close-outline"  ></ion-icon>
+                      </div>
+                     
+                  </div>      
+                  <div class="userDetails  " >
+                
+                      <form action="" class="flexDetailsInput">
+                          <div class="flexDetails" >
+                              <label for="">Mark :</label>
+                              <input type="text">
+                          </div>
+                       
+                      </form>
+                    </div>
+                        
+                    <div class="AouqphDetails" >
+                        <form action="" class="flexDetailsInput">
+                            <div class="saveIcon" >
+                                <ion-icon name="save-outline"></ion-icon>
+                            </div>
+                        </form>
+                
+                    </div>
+                </div>
+
+            
+
         </div>
 
 
@@ -205,5 +248,66 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="asset/JS.js" ></script>
+    <script>
+      function addMark() {
+  
+          document.querySelector(".hoverEvent").addEventListener('click', function () {
+          onaddMark();
+          
+          });
+      };
+          
+      function onaddMark() {
+              document.querySelector(".overlay").style.display = "block";
+              document.querySelector(".addMarkCard").style.display = "block";
+      };
+          
+      function offaddMark() {
+              document.querySelector(".overlay").style.display = "none";
+              document.querySelector(".addMarkCard").style.display = "none";
+      };
+
+      
+      function editUserDetails() {
+  
+      
+       
+       const Item1 = document.querySelector(".supervisorLabele");
+       const newItem = document.createElement('input');
+       Item1.parentNode.replaceChild(newItem, Item1);
+
+       const Item2 = document.querySelector(".UserNameLable");
+       const newItem2 = document.createElement('input');
+       Item2.parentNode.replaceChild(newItem2, Item2);
+
+       const Item3 = document.querySelector(".AlmasijedNameLable");
+       const newItem3 = document.createElement('input');
+     
+       Item3.parentNode.replaceChild(newItem3, Item3);
+
+       const Item4 = document.querySelector(".PasswordLable");
+       const newItem4 = document.createElement('input');
+       Item4.parentNode.replaceChild(newItem4, Item4);
+
+     
+     
+    };
+
+
+    function editProbe() {
+      const Item5 = document.querySelector(".UserPartLable");
+      const newItem5 = document.createElement('input');
+      Item5.parentNode.replaceChild(newItem5, Item5);
+
+      const Item6 = document.querySelector(".MarkdLable");
+      const newItem6 = document.createElement('input');
+      Item6.parentNode.replaceChild(newItem6, Item6);
+
+      const Item7 = document.querySelector(".DateLable");
+      const newItem7 = document.createElement('input');
+      newItem7.setAttribute("type", "date");
+      Item7.parentNode.replaceChild(newItem7, Item7);
+    }
+  </script>
 </body>
 </html>
