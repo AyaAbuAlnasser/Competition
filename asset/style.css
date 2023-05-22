@@ -447,7 +447,7 @@ th, td
     text-align: end;
  }
 
-.deleteUser button
+.deleteUser button , .tableIcon button
 {
     background-color: #EB455F;
     padding: 5px;

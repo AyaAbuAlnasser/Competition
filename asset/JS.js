@@ -173,20 +173,29 @@ saveIcon.addEventListener('click', function () {
 });
 
 
-// Delete User
 
-const deleteUser = document.querySelector(".deleteUser");
-const parantTrArchive = document.querySelector(".parantTrArchive");
+addUserList = document.querySelector(".check");
+addUserListDelete = document.querySelector(".delete");
 
-
-deleteUser.addEventListener('click', function () {
-  
-
-
-
-
-
-
-    console.log('aya');
+addUserList.addEventListener('click', function () {
+    
+    addUserList.remove();
+    addUserListDelete.remove();
+    changeStatusUser();
 
 });
+
+
+tableIcon = document.querySelector(".tableIcon");
+function changeStatusUser()
+{
+    
+  const addUserTable = document.createElement('tr');
+  addUserTable.classList.add('hoverEvent');
+
+  parantTr.prepend(addUserTable);
+
+  const addbuttnDelete= document.createElement('button');
+      addbuttnDelete.innerText = 'Delete';
+      tableIcon.appendChild(addbuttnDelete);
+};
