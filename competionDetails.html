@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html dir="rtl" lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="asset/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Gulzar&family=Montserrat:wght@100;200;300;500&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+
     <title>Competition Details</title>
 </head>
 <body>
@@ -15,35 +20,31 @@
                 <li>
                     <a href="#"  class="loge">
                         <span class="icon" ><img src="asset/image/quranLoge.jpg"alt="" height="50" width="50"></span>
-                        <span class="title logo" >Quran competition</span>
+                        <span class="title logo" >مسابقة القرآن</span>
                     </a>
                 </li>
                 <li>
                     <a href="index.html">
                         <span class="icon" ><ion-icon name="home-outline"></ion-icon></span>
-                        <span class="title" >User Managment</span>
+                        <span class="title" >ادارة الحسابات</span>
                     </a>
                 </li>
                 <li>
                     <a href="competitionManagment.html">
                         <span class="icon" ><ion-icon name="library-outline"></ion-icon></span>
-                        <span class="title" >Competition Managment</span>
+                        <span class="title" >ادراة المسابقات</span>
                     </a>
                 </li>
-                <li>
-                    <a href="help.html">
-                        <span class="icon" ><ion-icon name="help-outline"></ion-icon></span>
-                        <span class="title" >Help</span>
-                    </a>
-                </li>
+          
                 <li>
                     <a href="singIn.html">
                         <span class="icon" ><ion-icon name="log-out-outline"></ion-icon></span>
-                        <span class="title" >Sign out</span>
+                        <span class="title" >تسجيل خروج</span> 
                     </a>
                 </li>
             </ul>
         </div>
+  
 
 
         <!-- main -->
@@ -56,13 +57,13 @@
                 <!-- search -->
                 <div class="search">
                     <label for="">
-                        <input type="text" placeholder="Search here" >
+                        <input type="text" placeholder="ابحث هنا" >
                         <ion-icon name="search-outline"></ion-icon>
                     </label>
                 </div>
                 <!-- userImag -->
                 <div class="user">
-                    <img src="asset/image/user.jpg" alt="">
+                    <ion-icon name="person-outline" class="userIcon"></ion-icon>
                 </div>
             </div>
 
@@ -71,61 +72,71 @@
             <div class="details" >
                 <div class="usersDetails">
                     <div class="tableHeader">
-                        <h2>Competition/ <span>Ramadan</span>- <span>20/8/2012</span></h2>
+                        <h2>مسابقة/ <span>رمضان</span>- <span>20/8/2012</span></h2>
                         
                     </div>
                     <table>
                         <thead>
                             <tr>
-                                <th>Name Competition</th>
-                                <th>Part</th>
-                                <th>Mark</th>
+                                <th>اسم المتسابقة</th>
+                                <th>الاجزاء</th>
+                                <th>الفرع</th>
+                                <th>العلامة</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr class="hoverEvent" onclick="addMark(event)" >
-                                <td>Aya AbuAlnasser</td>
+                                <td>آية أبو النصر</td>
                                 <td>5/6/7</td>
+                                <td>حفظ</td>
                                 <td>10</td>
                             </tr>
                             <tr class="hoverEvent" onclick="addMark;" >
-                                <td>Aya AbuAlnasser</td>
+                                <td>شهد حيلاني</td>
                                 <td>5/6/7</td>
+                                <td>حفظ</td>
                                 <td>10</td>
                             </tr>
                             <tr class="hoverEvent" onclick="addMark" >
-                                <td>Aya AbuAlnasser</td>
+                                <td>بتول سيلم</td>
                                 <td>5/6/7</td>
+                                <td>حفظ</td>
                                 <td>10</td>
                             </tr>
                             <tr class="hoverEvent" onclick="addMark" >
-                                <td>Aya AbuAlnasser</td>
+                                <td>هيفاء غزالي</td>
                                 <td>5/6/7</td>
+                                <td>حفظ</td>
                                 <td>10</td>
                             </tr>
                             <tr class="hoverEvent" onclick="addMark" >
-                                <td>Aya AbuAlnasser</td>
+                                <td>سدرة علي</td>
                                 <td>5/6/7</td>
+                                <td>حفظ</td>
                                 <td>10</td>
                             </tr>
                             <tr class="hoverEvent" onclick="addMark" >
-                                <td>Aya AbuAlnasser</td>
+                                <td>إسراء تامر</td>
                                 <td>5/6/7</td>
+                                <td>حفظ</td>
                                 <td>10</td>
                             </tr>
                             <tr class="hoverEvent" onclick="addMark" >
-                                <td>Aya AbuAlnasser</td>
+                                <td>سارة سيلم</td>
                                 <td>5/6/7</td>
+                                <td>حفظ</td>
                                 <td>10</td>
                             </tr>
                             <tr class="hoverEvent" onclick="addMark" >
-                                <td>Aya AbuAlnasser</td>
+                                <td>آية أبو النصر</td>
                                 <td>5/6/7</td>
+                                <td>حفظ</td>
                                 <td>10</td>
                             </tr>
                             <tr class="hoverEvent" onclick="addMark" >
-                                <td>Aya AbuAlnasser</td>
+                                <td>بشرى ترجمان</td>
                                 <td>5/6/7</td>
+                                <td>حفظ</td>
                                 <td>10</td>
                             </tr>
                              <tr>

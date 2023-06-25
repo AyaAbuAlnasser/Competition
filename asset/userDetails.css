@@ -138,16 +138,16 @@
 
 .userDetailsSection ion-icon{
   position: absolute;
-  left: 980px;
-  top: 27px;
+  left: 42px;
+  top: 30px;
   font-size: 24px !important; 
   color: var(--blue);
 }
 
 .probeDetails ion-icon{
   position: absolute;
-  left: 980px;
-  top: 27px;
+  left: 42px;
+  top: 30px;
   font-size: 24px !important; 
   color: var(--blue);
 }

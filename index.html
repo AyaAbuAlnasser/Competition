@@ -1,12 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html dir="rtl" lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="asset/style.css">
-    <title>User Management</title>
+    <title>حسابات</title>
     <link rel="icon" type="image/png" href="asset/image/quranLoge.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Gulzar&family=Montserrat:wght@100;200;300;500&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
@@ -16,31 +25,25 @@
                 <li>
                     <a href="#"  class="loge">
                         <span class="icon" ><img src="asset/image/quranLoge.jpg"alt="" height="50" width="50"></span>
-                        <span class="title logo" >Quran competition</span>
+                        <span class="title logo" >مسابقة القرآن</span>
                     </a>
                 </li>
                 <li>
                     <a href="index.html">
                         <span class="icon" ><ion-icon name="home-outline"></ion-icon></span>
-                        <span class="title" >User Managment</span>
+                        <span class="title" >ادارة الحسابات</span>
                     </a>
                 </li>
                 <li>
                     <a href="competitionManagment.html">
                         <span class="icon" ><ion-icon name="library-outline"></ion-icon></span>
-                        <span class="title" >Competition Managment</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="help.html">
-                        <span class="icon" ><ion-icon name="help-outline"></ion-icon></span>
-                        <span class="title" >Help</span>
+                        <span class="title" >ادراة المسابقات</span>
                     </a>
                 </li>
                 <li>
                     <a href="singIn.html">
                         <span class="icon" ><ion-icon name="log-out-outline"></ion-icon></span>
-                        <span class="title" >Sign out</span>
+                        <span class="title" >تسجيل خروج</span> 
                     </a>
                 </li>
             </ul>
@@ -57,13 +60,13 @@
                 <!-- search -->
                 <div class="search">
                     <label for="">
-                        <input type="text" placeholder="Search here" >
+                        <input type="text" placeholder="ابحث هنا" >
                         <ion-icon name="search-outline"></ion-icon>
                     </label>
                 </div>
                 <!-- userImag -->
                 <div class="user">
-                    <img src="asset/image/user.jpg" alt="">
+                    <ion-icon name="person-outline" class="userIcon"></ion-icon>
                 </div>
             </div>
 
@@ -72,8 +75,8 @@
 
             
             <div class="tabe" >
-                <a href="#" class="userTabe" >Users</a>
-                <a href="#" class="archiveTabe" >Archive</a>
+                <a href="#" class="userTabe" >حسابات</a>
+                <a href="#" class="archiveTabe" >ارشيف</a>
             </div>
 
             <div class="details usersTable" >
@@ -82,32 +85,40 @@
                   
 
                     <div class="tableHeader">
-                        <h2 style="font-weight: bold;" >Users</h2>
-                        <button href="" class="btn " >Add User</button>
+                        <h2 style="font-weight: bold;" >حسابات</h2>
+                        <button href="" class="btn " >اضافة حساب</button>
                     </div>
 
 
                     <table class="userTable"  >
                         <thead>
                             <tr>
-                                <th>User name</th>
-                                <th>Almasijed</th>
-                                <th>supervisor</th>
+                                <th>الاسم</th>
+                                <th>المسجد</th>
+                                <th>المشرفة</th>
                                 <th class="rowWidth" ></th>
                             </tr>
                         </thead>
                         <tbody class="parantTr" >
                             <tr class="hoverEvent"  >
-                                <td onclick="redirect();">Aya AbuAlnasser</td>
-                                <td>omar</td>
-                                <td>nour</td>
+                                <td onclick="redirect();">آية أبو النصر</td>
+                                <td>عمرو بن العاص</td>
+                                <td>آ.نهى بلط</td>
                                 <td class="tableIcon" >
                                 <img class="check" height="25" width="25" src="https://img.icons8.com/emoji/48/null/check-mark-emoji.png"/>
                                 <img class="delete" height="25" width="25" src="https://img.icons8.com/color/48/null/delete-sign--v1.png"/>
                                 </td>
+                             
                             </tr>
-                            
-                             <tr>
+                            <tr class="hoverEvent" >
+                                <td onclick="redirect();">آية أبو النصر</td>
+                                <td>عمرو بن العاص</td>
+                                <td>آ.نهى بلط</td>
+                                <td class="tableIcon" >
+                                    <button class="delete" >Delete</button>
+                                </td>
+                            </tr>
+                             <tr class="footerTable" >
                                 <th colspan="3" > SHOWING 21-30 OF 100</th>
                                 <th class="hoverEvent arrowsIcon " >
                                     <ion-icon name="chevron-back-outline"></ion-icon>
@@ -132,13 +143,13 @@
 
 
 
-            <div class="details archiveTable" >
+            <div class="details archiveTable" style="overflow-x:auto;">
 
                 <div class="usersDetails">
                   
 
                     <div class="tableHeader">
-                        <h2>Archive</h2>
+                        <h2>ارشيف</h2>
                        
                     </div>
 
@@ -146,65 +157,65 @@
                     <table class="userTable"  >
                         <thead>
                             <tr>
-                                <th>User name</th>
-                                <th>Almasijed</th>
-                                <th>supervisor</th>
+                                <th>الاسم</th>
+                                <th>المسجد</th>
+                                <th>المشرفة</th>
                                 <th class="rowWidth" ></th>
                             </tr>
                         </thead>
                         <tbody class="parantTr parantTrArchive" >
-                            <tr class="hoverEvent" onclick="redirect();" >
-                                <td>Aya AbuAlnasser</td>
-                                <td>omar</td>
-                                <td>nour</td>
+                            <tr class="hoverEvent" >
+                                <td  onclick="redirect();">آيةأبو النصر</td>
+                                <td>عمرو بن العاص</td>
+                                <td>آ.نهى بلط</td>
                                 <td><ion-icon name="arrow-undo-circle-outline"></ion-icon></td>
                             </tr>
-                            <tr class="hoverEvent" onclick="redirect();" >
-                                <td>Aya AbuAlnasser</td>
-                                <td>omar</td>
-                                <td>nour</td>
+                            <tr class="hoverEvent" >
+                                <td onclick="redirect();" >بتول سيلم</td>
+                                <td>عمرو بن العاص</td>
+                                <td>نهى بلط</td>
                                 <td><ion-icon name="arrow-undo-circle-outline"></ion-icon></td>
                             </tr>
-                            <tr class="hoverEvent" onclick="redirect();" >
-                                <td>Aya AbuAlnasser</td>
-                                <td>omar</td>
-                                <td>nour</td>
+                            <tr class="hoverEvent" >
+                                <td  onclick="redirect();">شهد حيلاني</td>
+                                <td>عمرو بن العاص</td>
+                                <td>آ.نهى بلط</td>
                                 <td><ion-icon name="arrow-undo-circle-outline"></ion-icon></td>
                             </tr>
-                            <tr class="hoverEvent" onclick="redirect();" >
-                                <td>Aya AbuAlnasser</td>
-                                <td>omar</td>
-                                <td>nour</td>
+                            <tr class="hoverEvent" >
+                                <td onclick="redirect();" >إسراء تامر</td>
+                                <td>عمرو بن العاص</td>
+                                <td>آ.نهى بلط</td>
                                 <td><ion-icon name="arrow-undo-circle-outline"></ion-icon></td>
                             </tr>
-                            <tr class="hoverEvent" onclick="redirect();" >
-                                <td>Aya AbuAlnasser</td>
-                                <td>omar</td>
-                                <td>nour</td>
+                            <tr class="hoverEvent"  >
+                                <td onclick="redirect();">هيفاء غزالي</td>
+                                <td>عمرو بن العاص</td>
+                                <td>آ.نهى بلط</td>
                                 <td><ion-icon name="arrow-undo-circle-outline"></ion-icon></td>
                             </tr>
-                            <tr class="hoverEvent" onclick="redirect();" >
-                                <td>Aya AbuAlnasser</td>
-                                <td>omar</td>
-                                <td>nour</td>
+                            <tr class="hoverEvent" >
+                                <td onclick="redirect();" >سدرة علي</td>
+                                <td>عمرو بن العاص</td>
+                                <td>آ.نهى بلط</td>
                                 <td><ion-icon name="arrow-undo-circle-outline"></ion-icon></td>
                             </tr>
-                            <tr class="hoverEvent" onclick="redirect();" >
-                                <td>Aya AbuAlnasser</td>
-                                <td>omar</td>
-                                <td>nour</td>
+                            <tr class="hoverEvent" >
+                                <td onclick="redirect();" >بتول سيلم</td>
+                                <td>عمرو بن العاص</td>
+                                <td>آ.نهى بلط</td>
                                 <td><ion-icon name="arrow-undo-circle-outline"></ion-icon></td>
                             </tr>
-                            <tr class="hoverEvent" onclick="redirect();" >
-                                <td>Aya AbuAlnasser</td>
-                                <td>omar</td>
-                                <td>nour</td>
+                            <tr class="hoverEvent" >
+                                <td onclick="redirect();" >أصالة نصري</td>
+                                <td>عمر بن الخطاب</td>
+                                <td>آ.شيماء </td>
                                 <td><ion-icon name="arrow-undo-circle-outline"></ion-icon></td>
                             </tr>
-                            <tr class="hoverEvent" onclick="redirect();" >
-                                <td>Aya AbuAlnasser</td>
-                                <td>omar</td>
-                                <td>nour</td>
+                            <tr class="hoverEvent" >
+                                <td onclick="redirect();" >بشرى ترجمان</td>
+                                <td>عمر بن الخطاب</td>
+                                <td>آ.شيماء </td>
                                 <td><ion-icon name="arrow-undo-circle-outline"></ion-icon></td>
                             </tr>
                              <tr>
@@ -235,7 +246,7 @@
      
                     <div class="addUserCard contenar" >
                       <div class=" userDetailsTitle " >
-                          <h3 style="font-weight: bold; color: #005937;">User Details</h3>
+                          <h3 style="font-weight: bold; color: #005937;">تفاصيل المتسابق</h3>
                           <div class="closeCard"onclick="closeCard();">
                             <ion-icon name="close-outline"  ></ion-icon>
                           </div>
@@ -245,45 +256,61 @@
                     
                           <form action="" class="flexDetailsInput">
                               <div class="flexDetails" >
-                                  <label for="">User Name :</label>
+                                  <label for="">الاسم :</label>
                                   <input type="text" id="textUserName">
                               </div>
                               <div class="flexDetails" >
-                                  <label for="">Almasijed :</label>
+                                  <label for="">المسجد :</label>
                                   <input type="text" id="textAlmasijed">
                               </div>
                               <div class="flexDetails" >
-                                  <label for="">Supervisor :</label>
+                                  <label for="">المشرفة:</label>
                                   <input type="text"id="textSupervisor">
                               </div>
                               <div class="flexDetails" >
-                                  <label for="">Password :</label>
+                                  <label for="">كلمة المرور :</label>
                                   <input type="text"id="numPassword">
                               </div>
                               <div class="flexDetails" >
-                                  <label for="">Conffer :</label>
+                                  <label for="">تأكيد كلمة المرور :</label>
                                   <input type="text" id="textConffer">
                               </div>
                           </form>
                         </div>
                         <div class=" AouqphDetailsTitle " >
-                          <h3>Aouqph Details</h3>
+                          <h3>سبر الاوقاف</h3>
                         </div>      
                         <div class="AouqphDetails" >
                             <form action="" class="flexDetailsInput">
-                                <div class="flexDetails" >
-                                    <label for="">Part</label>
-                                    <input type="text"id="textPart">
+                                <div class="flexDetails" id="sounded-q" >
+                                    <div class="addUsersounded" id="addUsersoundedQ">
+                                        <div class="" >
+                                            <p>الاجزاء</p>
+                                            <select class="" >
+                                                <option vlaue="1"> الخمسة الاخيرة</option>
+                                                <option vlaue="2"> الخمسة الاولى</option>
+                                                <option vlaue="3"> العشرة الاولى</option>
+                                                <option vlaue="4"> العشرة الثانية</option>
+                                                <option vlaue="5"> العشرة الثالثة</option>
+                                                <option vlaue="6"> الخمسة عشر الاولى</option>
+                                                <option vlaue="7"> الخمسة عشر الثانية</option>
+                                                <option vlaue="8"> عشرون الاولى</option>
+                                                <option vlaue="9"> عشرون الثانية</option>
+                                                <option vlaue="10">القرآن كامل</option>
+                                            </select>
+                                        </div>
+                                        <div class="flexDetails" >
+                                            <label for="">التاريخ</label>
+                                            <input type="date"id="numDate">
+                                        </div>
+                                        <div class="addNewSounded" onclick="soundedNew();" >
+                                            <span  >+</span>
+                                        </div>
+                                    </div>
+                                    
                                 </div>
-                                <div class="flexDetails" >
-                                    <label for="">Date</label>
-                                    <input type="text"id="numDate">
-                                </div>
-                                <div class=" flexDetailsIcon " >
-                                    <ion-icon name="add-circle-outline"></ion-icon>
-                                </div>
-                                <div class="saveIcon" >
-                                    <ion-icon name="save-outline"id="saveIcon"></ion-icon>
+                                <div class="addtd" >
+                                    <button id="" >حفظ</button>
                                 </div>
                             </form>
                     
@@ -300,5 +327,6 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="asset/JS.js" ></script>
+   
 </body>
 </html>

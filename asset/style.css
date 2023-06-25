@@ -1,12 +1,12 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;500&family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gulzar&family=Montserrat:wght@100;200;300;500&family=Ubuntu:wght@300&display=swap');
 
 *{
 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Ubuntu', sans-serif;
+    
 }
 
 :root{
@@ -23,13 +23,15 @@ body{
 
     min-height: 100vh;
     overflow-x: hidden;
-
+    font-family: 'Amiri', serif !important;
+    font-size: 14px;
+    width: 100vw;
 }
 
 .container{
 
     position: relative;
-    width: 100%;
+    width: 98%;
 
 }
 
@@ -39,14 +41,15 @@ body{
     width: 300px;
     height: 100%;
     background-color: var(--blue);
-    border-left: 10px solid var(--blue);
+    border-right: 10px solid var(--blue);
     transform: 0.5s;
     overflow: hidden;
 }
 
-.navigation.active{  
+.navigation.active
+{  
     width: 80px;
-    
+         
 }
 
 .navigation ul
@@ -64,8 +67,8 @@ body{
     position: relative;
     width: 100%;
     list-style: none;
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
 }
 
 .navigation ul li:hover,
@@ -83,7 +86,11 @@ body{
 
    margin-bottom: 40px;
    pointer-events: none;
+
 }
+
+
+
 
 .navigation ul li a
 {
@@ -92,8 +99,10 @@ body{
     display: block;
     width: 100%;
     display: flex;
+    justify-content: flex-start;
     text-decoration: none;
     color: var(--white);
+    font-family: 'Amiri', serif;
 }
 
 .navigation ul li:hover a ,
@@ -106,10 +115,15 @@ body{
 .loge
 {
     margin-top: 5px;
+    
+    
 }
  .logo
 {
     line-height: 53px !important;
+    font-family: 'Gulzar', serif !important;
+    font-size: 24px;
+    color: #FFF5B8;
 }
 
 .icon img
@@ -157,13 +171,13 @@ body{
 {
     content: "";
     position: absolute;
-    right: 0;
-    top: -50px;
+    right: 83%;
+    top: -48px;
     width: 50px;
     height: 50px;
-    background: transparent ;
+    background: transparent;
     border-radius: 50%;
-    box-shadow: 35px 35px 0 10px var(--white);
+    box-shadow: -34px 38px 0 10px var(--white);
     pointer-events: none;
 }
 
@@ -172,13 +186,13 @@ body{
 {
     content: "";
     position: absolute;
-    right: 0;
+    right: 83%;
     bottom: -50px;
     width: 50px;
     height: 50px;
-    background: transparent ;
+    background: transparent;
     border-radius: 50%;
-    box-shadow: 35px -35px 0 10px var(--white);
+    box-shadow: -30px -35px 0 10px var(--white);
     pointer-events: none;
 }
 
@@ -192,17 +206,18 @@ body{
 
     position: absolute;
     width: calc(100% - 300px);
-    left: 300px;
+    left: 0;
     min-height: 100vh;
     background-color: var(--white);
     transform: 0.5s;
-
+    font-family: 'Amiri', serif !important;
+    font-size: 14px;
 }
 
 .main.active
 {
     width: calc(100% - 80px);
-    left: 80px;
+    right: 80px;
 }
 
 
@@ -214,6 +229,8 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 0 10px;
+  
+    
 }
 
 .toggle
@@ -269,9 +286,18 @@ body{
     position: relative;
     width: 40px;
     height: 40px;
+    border: 1px solid var(--blue) ;
     border-radius: 50%;
-    overflow: hidden;
     cursor: pointer; 
+}
+
+.userIcon
+{
+    position: absolute;
+    left: 9px;
+    top: 8px;
+    font-size: 21px;
+    color: var(--blue);
 }
 
 .user img
@@ -355,6 +381,7 @@ body{
     width: 100%;
     padding: 20px;
     top: 34px;
+    font-family: 'Amiri', serif !important;
 }
 
 .details .usersDetails
@@ -467,12 +494,12 @@ th, td
 
     position: absolute;
     background-color: var(--white);
-    display:none;
+    display: none ;
     width: 600px;
-    height: 450px;
-    left: 22%;
-    top: 12%;
-    border-radius: 6px;
+    min-height: 620px;
+    left: 28%;
+    top: 8%;
+    border-radius: 20px;
     z-index: 2;
     box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
 }  
@@ -493,19 +520,25 @@ th, td
 
 
 
-.addComptionCard{
+.addComptionCard , .ContestRegistration{
 
     position: absolute;
     background-color: var(--white);
-    display:none;
+    display: none;
     width: 400px;
-    height: 300px;
+    min-height: 300px;
     left: 42%;
     top: 20%;
-    border-radius: 21px;
+    border-radius: 20px;
     z-index: 2;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
 
+}
 
+.ContestRegistration
+{
+    min-height: 350px !important;
+    width: 450px !important;
 }
 .flexDetails{
 
@@ -520,13 +553,13 @@ form .flexDetails input{
     height: 26px;
     
 }
-.flexDetailsInput {
+/* .flexDetailsInput {
 
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-}
+} */
 
 .flexDetailsInputComption{
     display: flex;
@@ -542,10 +575,10 @@ form .flexDetails input{
 .flexDetailsIcon
 {
     position: absolute;
-    top: 80%;
+    top: 68%;
     left: 92%;
     font-size: 1.5em;
-
+    
 }
 .contenar{
 
@@ -596,9 +629,23 @@ form .flexDetails input{
 .saveIcon ,.saveIconComption{
 
     position: absolute;
-    left: 90%;
-    top: 90%;
     font-size: 1.5em;
+ 
+  }
+
+  .saveIcon {
+
+
+    left: 85%;
+    top: 90%;
+
+ 
+  }
+.saveIconComption{
+
+  
+    left: 78%;
+    top: 84%;
  
   }
 
@@ -607,21 +654,25 @@ form .flexDetails input{
     cursor: pointer;
   }
 
-/* 
-  .saveIconComption{
 
-    position: absolute;
-    left: 84%;
-    top: 83%;
-    font-size: 1.5em;
-    cursor: pointer;
-  } */
-
-
-  .card
+  .saveIcon button ,.saveIconComption button
   {
+      background-color: var(--blue);
+      padding: 8px;
+      color: var(--white);
+      border: 0;
+      border-radius: 5px;
+      font-size: 16px;
+      width: 70px;
+  }
+
+
+
+
+.card
+{
       
-      width: 350px;
+      max-width: 350px;
       position: relative;
       top: 8px;
       display: grid;
@@ -632,9 +683,17 @@ form .flexDetails input{
       border-radius: 20px;
       display: block;
    
-  }
+}
 
-  .card p
+.card:hover
+{
+      
+     background-color:var(--blue);
+     color: var(--white);
+   
+}  
+
+.card p
 {
     margin: 5px 0;
 }
@@ -643,8 +702,8 @@ form .flexDetails input{
 .card span
 {
     position: absolute;
-    left: 85%;
-    top: 10px;
+    left: 6%;
+    top: 12px;
     color: var(--white);
     background-color: #F45050;
     padding: 4px;
@@ -656,3 +715,259 @@ form .flexDetails input{
 {
     cursor: pointer;
 }
+
+.dropdownPart 
+{
+    position: relative;
+    
+}
+
+
+.dropdownPart p
+{
+   
+    width: 200px !important;
+    
+}
+.dropdownPart:hover .dropdown
+{
+    display: block;
+    
+}
+.dropdownPart p::after
+{
+    content: "";
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid var(--black1);
+    position: absolute;
+    left: 4px;
+    top: 12px;
+}
+    
+
+.dropdown
+{
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.5);
+    -moz-box-shadow: 0 1px 1px rgba(0,0,0,.5);
+    box-shadow: 0 1px 1px rgba(0,0,0,.5);
+    background-color: var(--white);
+    width: 200px;
+    position: absolute;
+    display: none;
+}
+
+.dropdown li 
+{
+    list-style: none;
+
+}
+
+.dropdown li:hover 
+{
+    background-color: #999;
+    cursor: pointer;
+    border-bottom: 0;
+}
+
+input ,.dropdownPart
+{
+    border-radius: 8px !important;
+    border: 0.5px solid var(--black2);
+
+}
+
+.radio
+{
+    display: flex;
+}
+
+
+
+.radioDetails
+{
+    display: flex;
+}
+
+.radioDetails input
+{
+    min-height: 20px !important;
+    width: 20px !important;
+    margin-left: 44px !important;
+}
+
+.radioDetails span
+{
+    margin-left: 15px !important;
+}
+
+.activeQ
+{
+    display: block;
+}
+
+.inactiveQ
+{
+    display: none;
+}
+
+.ContestRegistration .saveIcon
+{
+    
+    left: 19px;
+    top: 72%;
+}
+
+.saveIcon button:hover
+{
+    cursor: pointer;
+}
+
+.addNewSounded 
+{   
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--blue);
+    border-radius: 50px;
+    cursor: pointer;
+    position: relative;
+    left: 2px;
+    top: 11px;
+
+}
+
+.addNewSounded:hover
+{   
+    background-color: #115e40;
+}
+.addNewSounded span
+{   
+    position: absolute;
+    left: 6px;
+    bottom: -4px;
+
+}
+
+.sounded
+{
+    display: flex !important;
+    width: 100% !important ;
+    justify-content: space-between !important;
+    align-items: center !important ; 
+}
+.soundedYN
+{
+    display: flex;
+    align-items: center;
+}
+
+.addUsersounded
+{
+    display: flex !important;
+    width: 100% !important ;
+    justify-content: space-between !important;
+    align-items: center !important ;
+}
+
+
+
+@media only screen and (max-width: 350px) {
+
+    
+    body{
+
+        width: 350px;
+    }
+
+  
+    .navigation
+    {
+        width: 80px;
+    }
+  
+     .main.topbar
+        {
+
+            width: 30px;
+        }
+        .search
+        {
+            width: 130px;
+        }
+        .user
+        {
+        
+            width: 30px;
+            height: 30px;
+         
+        }
+
+        .userIcon
+        {
+           
+            left: 6px;
+            top: 6px;
+            font-size: 16px;
+            
+        }
+
+        .main
+        {
+            width: calc(100% - 80px);
+            right: 80px;
+        }
+        
+        .userTable thead{
+            display: none;
+        }
+    
+        .userTable, .userTable tbody, .userTable tr, .userTable td{
+            display: block;
+            width: 100%;
+        }
+        .userTable tr{
+            margin-bottom:15px;
+        }
+        .userTable td{
+            text-align: right;
+            padding-left: 50%;
+            text-align: right;
+            position: relative;
+        }
+        .userTable td::before{
+            content: attr(data-label);
+            position: absolute;
+            left:0;
+            width: 50%;
+            padding-left:15px;
+            font-size:15px;
+            font-weight: bold;
+            text-align: left;
+        }
+        .footerTable
+        {
+            font-size: 14px;
+            display: flex !important;
+            flex-direction: column;
+        }
+        .addUserCard {
+
+            width:300px;
+            height: 300px;
+            left: 34px;
+            top: 7px;
+            position: fixed;
+            overflow: scroll !important;
+          
+        }  
+        .addUsersounded
+        {
+            display: flex;
+            flex-direction: column;
+            
+        }
+        .card
+        {
+            width: 231px;
+        }
+  }

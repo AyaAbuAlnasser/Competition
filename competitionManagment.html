@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html dir="rtl" lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="asset/style.css">
-    <title>Competition Managment</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Gulzar&family=Montserrat:wght@100;200;300;500&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+
+    <title>مسابقات</title>
 </head>
 <body>
 
@@ -15,31 +20,26 @@
                 <li>
                     <a href="#"  class="loge">
                         <span class="icon" ><img src="asset/image/quranLoge.jpg"alt="" height="50" width="50"></span>
-                        <span class="title logo" >Quran competition</span>
+                        <span class="title logo" >مسابقة القرآن</span>
                     </a>
                 </li>
                 <li>
                     <a href="index.html">
                         <span class="icon" ><ion-icon name="home-outline"></ion-icon></span>
-                        <span class="title" >User Managment</span>
+                        <span class="title" >ادارة الحسابات</span>
                     </a>
                 </li>
                 <li>
                     <a href="competitionManagment.html">
                         <span class="icon" ><ion-icon name="library-outline"></ion-icon></span>
-                        <span class="title" >Competition Managment</span>
+                        <span class="title" >ادراة المسابقات</span>
                     </a>
                 </li>
-                <li>
-                    <a href="help.html">
-                        <span class="icon" ><ion-icon name="help-outline"></ion-icon></span>
-                        <span class="title" >Help</span>
-                    </a>
-                </li>
+
                 <li>
                     <a href="singIn.html">
                         <span class="icon" ><ion-icon name="log-out-outline"></ion-icon></span>
-                        <span class="title" >Sign out</span>
+                        <span class="title" >تسجيل خروج</span> 
                     </a>
                 </li>
             </ul>
@@ -56,13 +56,13 @@
                 <!-- search -->
                 <div class="search">
                     <label for="">
-                        <input type="text" placeholder="Search here" >
+                        <input type="text" placeholder="ابحث هنا" >
                         <ion-icon name="search-outline"></ion-icon>
                     </label>
                 </div>
                 <!-- userImag -->
                 <div class="user">
-                    <img src="asset/image/user.jpg" alt="">
+                    <ion-icon name="person-outline" class="userIcon"></ion-icon>
                 </div>
             </div>
 
@@ -71,78 +71,78 @@
             <div class="details" >
                 <div class="usersDetails">
                     <div class="tableHeader">
-                        <h2 style="font-weight: bold;">Competition</h2>
-                        <button href="" class="btn " id="btnCompetition">Add Competition</button>
+                        <h2 style="font-weight: bold;">مسابقات</h2>
+                        <button href="" class="btn " id="btnCompetition">اضافة مسابقة</button>
                     </div>
                     <table>
                         <thead>
                             <tr>
-                                <th>Name Competition</th>
-                                <th>Success</th>
-                                <th>Repeaters</th>
-                                <th>Date</th>
+                                <th>أضافة مسابقة</th>
+                                <th>النجاحين</th>
+                                <th>لم تكمل</th>
+                                <th>التاريخ</th>
                                 <th class="rowWidth" ></th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr class="hoverEvent" onclick="redirectComp();" >
-                                <td>Ramadan</td>
+                                <td>رمضان</td>
                                 <td>80</td>
                                 <td>10</td>
                                 <td>20/8/2012</td>
                                 <td></td>
                               </tr>
                               <tr class="hoverEvent" onclick="redirectComp();" >
-                                <td>Ramadan</td>
+                                <td>رجب</td>
                                 <td>80</td>
                                 <td>10</td>
                                 <td>20/8/2012</td>
                                 <td></td>
                               </tr>
                               <tr class="hoverEvent" onclick="redirectComp();" >
-                                <td>Ramadan</td>
+                                <td>شعبان</td>
                                 <td>80</td>
                                 <td>10</td>
                                 <td>20/8/2012</td>
                                 <td></td>
                               </tr>
                               <tr class="hoverEvent" onclick="redirectComp();" >
-                                <td>Ramadan</td>
+                                <td>المولد النبوي</td>
                                 <td>80</td>
                                 <td>10</td>
                                 <td>20/8/2012</td>
                                 <td></td>
                               </tr>
                               <tr class="hoverEvent" onclick="redirectComp();" >
-                                <td>Ramadan</td>
+                                <td>شعبان</td>
                                 <td>80</td>
                                 <td>10</td>
                                 <td>20/8/2012</td>
                                 <td></td>
                               </tr>
                               <tr class="hoverEvent" onclick="redirectComp();" >
-                                <td>Ramadan</td>
+                                <td>اذار</td>
                                 <td>80</td>
                                 <td>10</td>
                                 <td>20/8/2012</td>
                                 <td></td>
                               </tr>
                               <tr class="hoverEvent" onclick="redirectComp();" >
-                                <td>Ramadan</td>
+                                <td>المولد النبوي</td>
                                 <td>80</td>
                                 <td>10</td>
                                 <td>20/8/2012</td>
                                 <td></td>
                               </tr>
                               <tr class="hoverEvent" onclick="redirectComp();" >
-                                <td>Ramadan</td>
+                                <td>شعبان</td>
                                 <td>80</td>
                                 <td>10</td>
                                 <td>20/8/2012</td>
                                 <td></td>
                               </tr>
                               <tr class="hoverEvent" onclick="redirectComp();" >
-                                <td>Ramadan</td>
+                                <td>اذار</td>
                                 <td>80</td>
                                 <td>10</td>
                                 <td>20/8/2012</td>
@@ -175,7 +175,7 @@
      
                     <div class=" contenar addComptionCard"  >
                       <div class=" userDetailsTitle " >
-                          <h3 style="font-weight: bold; color: #005937;">New Competition</h3>
+                          <h3 style="font-weight: bold; color: #005937;">مسابقة جديدة</h3>
                           <div class="closeCard"onclick="closeCard();">
                             <ion-icon name="close-outline"  ></ion-icon>
                           </div>
@@ -185,23 +185,23 @@
                     
                           <form action="" class="flexDetailsInput">
                               <div class="flexDetails" >
-                                  <label for="">Competition Name :</label>
+                                  <label for="">اسم المسابقة :</label>
                                   <input type="text">
                               </div>
                               <div class="flexDetails" >
-                                  <label for="">Expiry date :</label>
+                                  <label for="">تاريخ انتهاء التسجيل :</label>
                                   <input type="date">
                               </div>
                               <div class="flexDetails" >
-                                  <label for="">Contest date  :</label>
+                                  <label for="">تاريخ المسابقة  :</label>
                                   <input type="date">
                               </div>
                           </form>
                         </div>      
                         <div class="AouqphDetails" >
                             
-                                <div class="saveIcon" >
-                                    <ion-icon name="save-outline"></ion-icon>
+                                <div class="saveIconComption " >
+                                    <button>حفظ</button>
                                 </div>
                     
                         </div>

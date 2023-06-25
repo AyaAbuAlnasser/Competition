@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html dir="rtl" lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="asset/style.css">
     <link rel="stylesheet" href="asset/userDetails.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Gulzar&family=Montserrat:wght@100;200;300;500&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+
     <title>Users Details</title>
 </head>
 <body>
@@ -13,38 +18,33 @@
       <div class="container" >
         <div class="navigation" >
           <ul>
-            <li>
-              <a href="#"  class="loge">
-                  <span class="icon" ><img src="asset/image/quranLoge.jpg"alt="" height="50" width="50"></span>
-                  <span class="title logo" >Quran competition</span>
-              </a>
-          </li>
+              <li>
+                  <a href="#"  class="loge">
+                      <span class="icon" ><img src="asset/image/quranLoge.jpg"alt="" height="50" width="50"></span>
+                      <span class="title logo" >مسابقة القرآن</span>
+                  </a>
+              </li>
               <li>
                   <a href="index.html">
                       <span class="icon" ><ion-icon name="home-outline"></ion-icon></span>
-                      <span class="title" >User Managment</span>
+                      <span class="title" >ادارة الحسابات</span>
                   </a>
               </li>
               <li>
                   <a href="competitionManagment.html">
                       <span class="icon" ><ion-icon name="library-outline"></ion-icon></span>
-                      <span class="title" >Competition Managment</span>
+                      <span class="title" >ادراة المسابقات</span>
                   </a>
               </li>
-              <li>
-                  <a href="help.html">
-                      <span class="icon" ><ion-icon name="help-outline"></ion-icon></span>
-                      <span class="title" >Help</span>
-                  </a>
-              </li>
+        
               <li>
                   <a href="singIn.html">
                       <span class="icon" ><ion-icon name="log-out-outline"></ion-icon></span>
-                      <span class="title" >Sign out</span>
+                      <span class="title" >تسجيل خروج</span> 
                   </a>
               </li>
           </ul>
-        </div>
+      </div>
 
 
         <!-- main -->
@@ -57,14 +57,14 @@
                 <!-- search -->
                 <div class="search">
                     <label for="">
-                        <input type="text" placeholder="Search here" >
+                        <input type="text" placeholder="ابحث هنا" >
                         <ion-icon name="search-outline"></ion-icon>
                     </label>
                 </div>
                 <!-- userImag -->
                 <div class="user">
-                    <img src="asset/image/user.jpg" alt="">
-                </div>
+                  <ion-icon name="person-outline" class="userIcon"></ion-icon>
+              </div>
             </div>
 
             <!-- table -->
@@ -77,22 +77,22 @@
               <div class="userDetailsSection" id="template" >
                 
                   
-                    <p id="UserName" class="UserName">User Name :</p>
+                    <p id="UserName" class="UserName">الاسم :</p>
                     <label for="UserName" class="UserNameLable">Aya Abu Alnasser</label>
                 
                 
-                    <p id="Almasijed" class="AlmasijedName">Almasijed :</p>
+                    <p id="Almasijed" class="AlmasijedName">المسجد :</p>
                     <label for="Almasijed" class="AlmasijedNameLable">Omar</label>
              
               
               
                    
                
-                  <p id="Password" class="Password" >Password :</p>
+                  <p id="Password" class="Password" >كلمة المرور :</p>
                   <label for="Password" class="PasswordLable" >1235678</label>
             
                   
-                  <p id="supervisor" class="supervisor" >supervisor :</p>
+                  <p id="supervisor" class="supervisor" >المشرفة :</p>
                   <label for="supervisor" class="supervisorLabele" >Manal</label>
    
                   <ion-icon name="create-outline"  onclick="editUserDetails()"></ion-icon>
@@ -105,11 +105,11 @@
 
           <div class="probe" >
             <div class="probeDetails" >
-              <p id="PartName" class="PartName">Part :</p>
+              <p id="PartName" class="PartName">جزء :</p>
               <label for="PartName" class="UserPartLable">1/2/3</label>
-              <p id="Mark" class="MarkName">Mark :</p>
+              <p id="Mark" class="MarkName">العلامة :</p>
               <label for="Markd" class="MarkdLable">95</label>
-              <p id="Date" class="Date" >Date :</p>
+              <p id="Date" class="Date" >التاريخ :</p>
               <label for="Date" class="DateLable" >2/8/2022</label>
               <ion-icon name="create-outline" class="icon" onclick="editProbe()"></ion-icon>
             </div>
@@ -120,64 +120,64 @@
             <div class="details" >
                 <div class="usersDetails">
                     <div class="tableHeader">
-                        <h2>Users</h2>
+                        <h2>المتسابقين</h2>
                         
                     </div>
                     <table>
                         <thead>
                             <tr>
-                              <th>Name Competition</th>
-                              <th>Part</th>
-                              <th>Mark</th>
-                              <th >Date</th>
+                              <th>اسم المسابقة</th>
+                              <th>الاجزاء</th>
+                              <th>العلامة</th>
+                              <th >التاريخ</th>
                             </tr>
                         </thead>
                         <tbody>
-                          <tr class="hoverEvent" onclick="addMark();" >
-                            <td>Ramadan</td>
+                          <tr class="hoverEvent">
+                            <td>رمضان</td>
                             <td>8/7/6</td>
                             <td>70</td>
                             <td>20/8/2012</td>
                           </tr>
-                          <tr class="hoverEvent" onclick="addMark();">
-                            <td>Almaouled</td>
+                          <tr class="hoverEvent">
+                            <td>المولد النبوي</td>
                             <td>1/2/3</td>
                             <td>90</td>
                             <td>9/5/2022</td>
                           </tr>
-                          <tr class="hoverEvent" onclick="addMark();">
-                            <td>Febrier</td>
+                          <tr class="hoverEvent">
+                            <td>اذار</td>
                             <td>1/2/3/4/5</td>
                             <td>95</td>
                             <td>12/2/2022</td>
                           </tr>
-                          <tr class="hoverEvent" onclick="addMark();">
-                            <td>March</td>
-                            <td>First10</td>
+                          <tr class="hoverEvent">
+                            <td>شعبان</td>
+                            <td>العشرة الاولى</td>
                             <td>83</td>
                             <td>3/9/2017</td>
                           </tr>
-                          <tr class="hoverEvent" onclick="addMark();">
-                            <td>Ramadan</td>
-                            <td>Finel5</td>
+                          <tr class="hoverEvent">
+                            <td>رجب</td>
+                            <td>العشرة الاخيرة</td>
                             <td>98</td>
                             <td>21/9/2019</td>
                           </tr>
-                          <tr class="hoverEvent" onclick="addMark();">
-                            <td>Ramadan</td>
-                            <td>Finel5</td>
+                          <tr class="hoverEvent">
+                            <td>رمضان</td>
+                            <td>الخمسة الاولى</td>
                             <td>98</td>
                             <td>21/9/2019</td>
                           </tr>
-                          <tr class="hoverEvent" onclick="addMark();">
-                            <td>Ramadan</td>
-                            <td>Finel5</td>
+                          <tr class="hoverEvent">
+                            <td>اذار</td>
+                            <td>الخمسة الاخيرة</td>
                             <td>98</td>
                             <td>21/9/2019</td>
                           </tr>
-                          <tr class="hoverEvent" onclick="addMark();">
-                            <td>Ramadan</td>
-                            <td>Finel5</td>
+                          <tr class="hoverEvent">
+                            <td>رمضان</td>
+                            <td>1/2/3</td>
                             <td>98</td>
                             <td>21/9/2019</td>
                           </tr>

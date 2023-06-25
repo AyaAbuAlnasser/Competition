@@ -1,12 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html dir="rtl" lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="asset/style.css">
-    <title>profile</title>
+    <title>حسابي</title>
     <link rel="icon" type="image/png" href="asset/image/quranLoge.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Gulzar&family=Montserrat:wght@100;200;300;500&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
@@ -16,19 +21,25 @@
                 <li>
                     <a href="#"  class="loge">
                         <span class="icon" ><img src="asset/image/quranLoge.jpg"alt="" height="50" width="50"></span>
-                        <span class="title logo" >Quran competition</span>
+                        <span class="title logo" >مسابقة القرآن</span>
                     </a>
                 </li>
                 <li>
                     <a href="User.html">
                         <span class="icon" ><ion-icon name="home-outline"></ion-icon></span>
-                        <span class="title" >profile</span>
+                        <span class="title" >حسابي</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="help.html">
+                        <span class="icon" ><ion-icon name="help-outline"></ion-icon></span>
+                        <span class="title" >مساعدة</span>  
                     </a>
                 </li>
                 <li>
                     <a href="singIn.html">
                         <span class="icon" ><ion-icon name="log-out-outline"></ion-icon></span>
-                        <span class="title" >Sign out</span>
+                        <span class="title" >تسجيل خروج</span>
                     </a>
                 </li>
             </ul>
@@ -45,13 +56,13 @@
                 <!-- search -->
                 <div class="search">
                     <label for="">
-                        <input type="text" placeholder="Search here" >
+                        <input type="text" placeholder="ابحث هنا" >
                         <ion-icon name="search-outline"></ion-icon>
                     </label>
                 </div>
                 <!-- userImag -->
                 <div class="user">
-                    <img src="asset/image/user.jpg" alt="">
+                    <ion-icon name="person-outline" class="userIcon"></ion-icon>
                 </div>
             </div>
 
@@ -59,80 +70,110 @@
 
 
             
-            <div class="tabe" >
-                <div class="card" >
-                    <h3>Ramadan</h3>
+            <div class="tabe"  >
+                <div class="card"onclick="newComp();" >
+                    <h3>رمضان</h3>
                     <p>
-                        Expiry date : 15/8/2023
+                        تاريخ انتهاء التسجيل : 15/8/2023
                     </p>
                     <p>
-                        Contest date : 31/8/2023
+                        تاريخ المسابقة : 31/8/2023
                     </p>
-                    <span>New</span>
+                    <span>جديد</span>
                 </div>
             </div>
 
             <div class="details" >
                 <div class="usersDetails">
                     <div class="tableHeader">
-                        <h2>Users</h2>
+                        <h2>مسابقاتي</h2>
                         
                     </div>
                     <table>
                         <thead>
                             <tr>
-                              <th>Name Competition</th>
-                              <th>Part</th>
-                              <th>Mark</th>
-                              <th >Date</th>
+                              <th>اسم المسابقة</th>
+                              <th>الاجزاء</th>
+                              <th>الفرع</th>
+                              <th>العلامة</th>
+                              <th >التاريخ</th>
                             </tr>
                         </thead>
                         <tbody>
-                          <tr class="hoverEvent" onclick="addMark();" >
-                            <td>Ramadan</td>
-                            <td>8/7/6</td>
-                            <td>70</td>
+                          <tr  >
+                            <td>اذار</td>
+                            <td>80</td>
+                            <td>حفظ</td>
+                            <td>10</td>
                             <td>20/8/2012</td>
                           </tr>
-                          <tr class="hoverEvent" onclick="addMark();">
-                            <td>Almaouled</td>
-                            <td>1/2/3</td>
-                            <td>90</td>
-                            <td>9/5/2022</td>
+                          <tr >
+                            <td>شعبان</td>
+                            <td>80</td>
+                            <td>حفظ</td>
+                            <td>10</td>
+                            <td>20/8/2012</td>
                           </tr>
-                          <tr class="hoverEvent" onclick="addMark();">
-                            <td>Febrier</td>
+                          <tr >
+                            <td>رمضان</td>
                             <td>1/2/3/4/5</td>
+                            <td>حفظ</td>
                             <td>95</td>
                             <td>12/2/2022</td>
                           </tr>
-                          <tr class="hoverEvent" onclick="addMark();">
-                            <td>March</td>
-                            <td>First10</td>
+                          <tr >
+                            <td>اذار</td>
+                            <td>العشرة الاولى</td>
+                            <td>مراجعة</td>
                             <td>83</td>
                             <td>3/9/2017</td>
                           </tr>
-                          <tr class="hoverEvent" onclick="addMark();">
-                            <td>Ramadan</td>
-                            <td>Finel5</td>
+                          <tr >
+                            <td> رجب</td>
+                            <td>الخمسة الثانية</td>
+                            <td>حفظ</td>
                             <td>98</td>
                             <td>21/9/2019</td>
                           </tr>
-                          <tr class="hoverEvent" onclick="addMark();">
-                            <td>Ramadan</td>
-                            <td>Finel5</td>
+                          <tr >
+                            <td>شعبان</td>
+                            <td>العشرة الاولى</td>
+                            <td>حفظ</td>
                             <td>98</td>
                             <td>21/9/2019</td>
                           </tr>
-                          <tr class="hoverEvent" onclick="addMark();">
-                            <td>Ramadan</td>
-                            <td>Finel5</td>
+                          <tr >
+                            <td>رمضان</td>
+                            <td>الخمسة الاخيرة</td>
+                            <td>مراجعة</td>
                             <td>98</td>
                             <td>21/9/2019</td>
                           </tr>
-                          <tr class="hoverEvent" onclick="addMark();">
-                            <td>Ramadan</td>
-                            <td>Finel5</td>
+                          <tr >
+                            <td>شعبان</td>
+                            <td>العشرة الاخيرة</td>
+                            <td>حفظ</td>
+                            <td>98</td>
+                            <td>21/9/2019</td>
+                          </tr>
+                          <tr >
+                            <td>شعبان</td>
+                            <td>العشرة الاخيرة</td>
+                            <td>حفظ</td>
+                            <td>98</td>
+                            <td>21/9/2019</td>
+                          </tr>
+                          <tr >
+                            <td>شعبان</td>
+                            <td>العشرة الاخيرة</td>
+                            <td>حفظ</td>
+                            <td>98</td>
+                            <td>21/9/2019</td>
+                          </tr>
+                          <tr >
+                            <td>شعبان</td>
+                            <td>العشرة الاخيرة</td>
+                            <td>حفظ</td>
                             <td>98</td>
                             <td>21/9/2019</td>
                           </tr>
@@ -152,149 +193,204 @@
 
 
 
-
-
-
-
-            <!-- archive -->
-
-
-
-
-            <div class="details archiveTable" >
-
-                <div class="usersDetails">
-                  
-
-                    <div class="tableHeader">
-                        <h2>Archive</h2>
-                       
-                    </div>
-
-
-                    <table class="userTable"  >
-                        <thead>
-                            <tr>
-                                <th>User name</th>
-                                <th>Almasijed</th>
-                                <th>supervisor</th>
-                                <th class="rowWidth" ></th>
-                            </tr>
-                        </thead>
-                        <tbody class="parantTr parantTrArchive" >
-                            <tr class="hoverEvent" onclick="redirect();" >
-                                <td>Aya AbuAlnasser</td>
-                                <td>omar</td>
-                                <td>nour</td>
-                                <td><ion-icon name="arrow-undo-circle-outline"></ion-icon></td>
-                            </tr>
-                            <tr class="hoverEvent" onclick="redirect();" >
-                                <td>Aya AbuAlnasser</td>
-                                <td>omar</td>
-                                <td>nour</td>
-                                <td><ion-icon name="arrow-undo-circle-outline"></ion-icon></td>
-                            </tr>
-                            <tr class="hoverEvent" onclick="redirect();" >
-                                <td>Aya AbuAlnasser</td>
-                                <td>omar</td>
-                                <td>nour</td>
-                                <td><ion-icon name="arrow-undo-circle-outline"></ion-icon></td>
-                            </tr>
-                            <tr class="hoverEvent" onclick="redirect();" >
-                                <td>Aya AbuAlnasser</td>
-                                <td>omar</td>
-                                <td>nour</td>
-                                <td><ion-icon name="arrow-undo-circle-outline"></ion-icon></td>
-                            </tr>
-                            <tr class="hoverEvent" onclick="redirect();" >
-                                <td>Aya AbuAlnasser</td>
-                                <td>omar</td>
-                                <td>nour</td>
-                                <td><ion-icon name="arrow-undo-circle-outline"></ion-icon></td>
-                            </tr>
-                            <tr class="hoverEvent" onclick="redirect();" >
-                                <td>Aya AbuAlnasser</td>
-                                <td>omar</td>
-                                <td>nour</td>
-                                <td><ion-icon name="arrow-undo-circle-outline"></ion-icon></td>
-                            </tr>
-                            <tr class="hoverEvent" onclick="redirect();" >
-                                <td>Aya AbuAlnasser</td>
-                                <td>omar</td>
-                                <td>nour</td>
-                                <td><ion-icon name="arrow-undo-circle-outline"></ion-icon></td>
-                            </tr>
-                            <tr class="hoverEvent" onclick="redirect();" >
-                                <td>Aya AbuAlnasser</td>
-                                <td>omar</td>
-                                <td>nour</td>
-                                <td><ion-icon name="arrow-undo-circle-outline"></ion-icon></td>
-                            </tr>
-                            <tr class="hoverEvent" onclick="redirect();" >
-                                <td>Aya AbuAlnasser</td>
-                                <td>omar</td>
-                                <td>nour</td>
-                                <td><ion-icon name="arrow-undo-circle-outline"></ion-icon></td>
-                            </tr>
-                             <tr>
-                                <th colspan="3" > SHOWING 21-30 OF 100</th>
-                                <th class="hoverEvent arrowsIcon " >
-                                    <ion-icon name="chevron-back-outline"></ion-icon>
-                                    <ion-icon name="chevron-forward-outline"></ion-icon>
-                                </th>
-                            </tr>
-                        </tbody>
-                    </table>
-
-
-                </div>
-
-            </div>
-
+    
            <!-- overlay -->
 
 
-                    <div class="overlay" >
+            <div class="overlay" >
 
+            </div>
+
+            <div class="ContestRegistration contenar">
+
+                <div class=" userDetailsTitle ContestRegistrationDetails " >
+                    <h3 style="font-weight: bold; color: #005937;"> رمضان</h3>
+                    <div class="closeCard" onclick="closeCard();">
+                      <ion-icon name="close-outline"  ></ion-icon>
                     </div>
+                </div> 
+                <div class="userDetails  " >
+                    
+                    <form action="" class="flexDetailsInput">
 
+                        <div class="flexDetails  activeQ">
+                            <label for="">هل سبرتي بالاوقاف؟</label>
+                            <div class="radio" >
+                                <div class="radioDetails" >
+                                    <span>نعم</span>
+                                    <input data-goto="2" type="radio" name="quest_1" value="y" class="q1-yes">
+                                </div>
+                                <div class="radioDetails">
+                                    <span>لا</span>
+                                    <input data-goto="3" type="radio" name="quest_1" value="n" class="q1-no" >
+                                </div>
+                            </div>   
+                        </div>
 
-                    <!-- addUserCard  -->
-     
-                    <div class=" contenar addComptionCard"  >
-                        <div class=" userDetailsTitle " >
-                            <h3 style="font-weight: bold; color: #005937;">New Competition</h3>
-                            <div class="closeCard"onclick="closeCard();">
-                              <ion-icon name="close-outline"  ></ion-icon>
+                        <div class="flexDetails  inactiveQ" id="sounded-q2 " data-goto="3">
+                            <label for="">ما هي الاجزاء التي سبرتيها ؟</label>
+                            <div class="sounded" id="soundedQ">
+                                <div class="" >
+                                    <p>الاجزاء</p>
+                                    <select class="" >
+                                        <option vlaue="1"> الخمسة الاخيرة</option>
+                                        <option vlaue="2"> الخمسة الاولى</option>
+                                        <option vlaue="3"> العشرة الاولى</option>
+                                        <option vlaue="4"> العشرة الثانية</option>
+                                        <option vlaue="5"> العشرة الثالثة</option>
+                                        <option vlaue="6"> الخمسة عشر الاولى</option>
+                                        <option vlaue="7"> الخمسة عشر الثانية</option>
+                                        <option vlaue="8"> عشرون الاولى</option>
+                                        <option vlaue="9"> عشرون الثانية</option>
+                                        <option vlaue="10">القرآن كامل</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <p>  هل نجحتي بهم</p>
+                                    <div class="soundedYN" >
+                                        <div class="radioDetails" >
+                                            <span>نعم</span>
+                                            <input  type="radio" name="quest_1" value="y" >
+                                        </div>
+                                        <div class="radioDetails">
+                                            <span>لا</span>
+                                            <input  type="radio" name="quest_1" value="n"  >
+                                        </div>
+                                    </div>
+                                   
+                                </div>
+                                <div class="addNewSounded" onclick="addSounded();" >
+                                    <span  >+</span>
+                                </div>
                             </div>
-                           
-                        </div>      
-                        <div class="userDetails  " >
-                      
-                            <form action="" class="flexDetailsInput">
-                                <div class="flexDetails" >
-                                    <label for="">Competition Name :</label>
-                                    <input type="text">
-                                </div>
-                                <div class="flexDetails" >
-                                    <label for="">Expiry date :</label>
-                                    <input type="date">
-                                </div>
-                                <div class="flexDetails" >
-                                    <label for="">Contest date  :</label>
-                                    <input type="date">
-                                </div>
-                            </form>
-                          </div>      
-                          <div class="AouqphDetails" >
-                              
-                                  <div class="saveIcon" >
-                                      <ion-icon name="save-outline"></ion-icon>
-                                  </div>
-                      
-                          </div>
-                      </div>
-               
+                            
+                            
+                        </div>
+
+                     
+                        <div class="flexDetails  inactiveQ">
+                            <label for="">ما هو الفرع الذي سوف تشاركين به بالمسابقة ؟</label>
+                            <div class="" >
+                                <p>الاجزاء</p>
+                                <select class="" >
+                                    <option value="1" data-goto="5">ثلاثة اجزاء</option>
+                                    <option value="2" data-goto="6"> خمسة اجزاء</option>
+                                    <option value="3" data-goto="7"> العشر الاجزاء</option>
+                                    <option value="4" data-goto="9">خمسة عشرة جزء  </option>
+                                    <option value="5" data-goto="8">العشرون جزء </option>
+                                    <option value="6" data-goto="10">القرآن كامل</option>
+                                </select>
+                            </div>
+                            
+                        </div>
+                        
+
+                        <div class="flexDetails  inactiveQ">
+                            <label for="">ما هي الاجزاء الذي سوف تشاركين بها بالمسابقة ؟</label>
+                            <div class="" >
+                                <p> ادخل الاجزاء </p>
+                               <input type="text">
+                            </div>
+                            
+                        </div>
+
+
+                        <div class="flexDetails  inactiveQ">
+                            <label for="">ما هي الاجزاء الذي سوف تشاركين بها بالمسابقة ؟</label>
+                            <div class="" >
+                                <p>الاجزاء</p>
+                                <select class="" >
+                                    <option value="1" data-goto="10"> خمسة اولى</option>
+                                    <option value="2" data-goto="10">  خمسة ثانية</option>
+                                    <option value="3" data-goto="10">  خمسة ثالثة</option>
+                                    <option value="4" data-goto="10">    خمسة رابعة</option>
+                                    <option value="5" data-goto="10">  خمسة خامسة</option>
+                                    <option value="6" data-goto="10"> خمسة آخيرة</option>
+                                </select>
+                            </div>
+                            
+                        </div>
+
+                        <div class="flexDetails  inactiveQ">
+                            <label for="">ما هي الاجزاء الذي سوف تشاركين بها بالمسابقة ؟</label>
+                            <div class="" >
+                                <p>الاجزاء</p>
+                                <select class="" >
+                                    <option value="1" data-goto="10"> عشرة اولى</op>
+                                    <option value="2" data-goto="10">  عشرة ثانية</option>
+                                    <option value="3" data-goto="10">  عشرة ثالثة</option>
+                                </select>
+                            </div>
+                            
+                        </div>
+
+                        <div class="flexDetails  inactiveQ">
+                            <label for="">ما هي الاجزاء الذي سوف تشاركين بها بالمسابقة ؟</label>
+                            <div class="" >
+                                <p>الاجزاء</p>
+                                <select class="" >
+                                    <option value="1" data-goto="10"> عشرون الاولى</option>
+                                    <option value="2" data-goto="10">  عشرون الثانية</option>
+                                </select>
+                            </div>
+                            
+                        </div>
+
+                        <div class="flexDetails  inactiveQ">
+                            <label for="">ما هي الاجزاء الذي سوف تشاركين بها بالمسابقة ؟</label>
+                            <div class="" >
+                                <p>الاجزاء</p>
+                                <select class="" >
+                                    <option value="1" data-goto="10"> خمسة عشر الاولى</option>
+                                    <option value="2" data-goto="10">  خمسة عشر الثانية</option>
+                                </select>
+                            </div>
+                            
+                        </div>
+
+                        <div class="flexDetails  inactiveQ" >
+                            <label for="">ما هي الاجزاء الذي سوف تشاركين بها بالمسابقة ؟</label>
+                            <div class="" >
+                                <p>الاجزاء</p>
+                                <select class="" >
+                                    <option value="1" data-goto="10"> مفردات الخمسة الاولى </option>
+                                    <option value="2" data-goto="10">  مفردات الخمسة الثانية</option>
+                                    <option value="3" data-goto="10">  مفردات الخمسة الثالثة</option>
+                                    <option value="4" data-goto="10">   مفردات الخمسة الرابعة</option>
+                                    <option value="5" data-goto="10"> مفردات الخمسة الخامسة</option>
+                                    <option value="6" data-goto="10">  مفردات الخمسة الآخيرة</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="flexDetails  inactiveQ" >
+                            <div>
+                                <p>في اي فترة ستشاركين</p>
+                                <div class="radio" >
+                                    <div class="radioDetails" >
+                                        <span>الصباحية</span>
+                                        <input data-goto="11" type="radio" name="quest_" value="y" class="">
+                                    </div>
+                                    <div class="radioDetails">
+                                        <span>المسائية</span>
+                                        <input data-goto="11" type="radio" name="quest_" value="n" class="" >
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                        
+                        <div class="flexDetails  inactiveQ">
+                            <div>
+                                <p> تم الانتهاء من التسجيل بنجاح</p>
+                            </div>
+                        </div>
+
+                        
+                    </form>
+                    <button type="button" id="next_question" onclick="nextQ()" >حفظ</button>
+                  </div>
+            </div>
+            
         </div>
 
 
@@ -302,9 +398,10 @@
      
 
     </div>
+    <script src="asset/user.js" ></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="asset/JS.js" ></script>
+    
     <script>
 
 

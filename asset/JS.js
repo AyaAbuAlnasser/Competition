@@ -112,7 +112,7 @@ const textConffer = document.querySelector("#textConffer");
 
 const textPart = document.querySelector("#textPart");
 const numDate = document.querySelector("#numDate");
-const saveIcon = document.querySelector("#saveIcon");
+const addtd = document.querySelector(".addtd");
 
 const parantTr = document.querySelector(".parantTr");
 const userTable = document.querySelector(".userTable");
@@ -121,7 +121,8 @@ const userTable = document.querySelector(".userTable");
 
 
 
-saveIcon.addEventListener('click', function () {
+addtd.addEventListener('click', function () {
+  console.log("hi");
     if(textuserName.value.trim().length == '' && textAlmasijed.value.trim().length == '' 
      && textSupervisor.value.trim().length == '' && numPassword.value.trim().length == ''
      && textConffer.value.trim().length == ''&& textPart.value.trim().length == ''
@@ -199,3 +200,25 @@ function changeStatusUser()
       addbuttnDelete.innerText = 'Delete';
       tableIcon.appendChild(addbuttnDelete);
 };
+
+
+
+
+
+
+
+function soundedNew()
+{
+    
+
+    let soundedN = document.getElementById('addUsersoundedQ').cloneNode(true);
+
+    soundedN.setAttribute('id', '');
+    soundedN.classList.add('addUsersounded');
+
+    soundedN.style.display = 'block';
+
+   
+    document.getElementById('sounded-q').appendChild(soundedN);
+ 
+}
