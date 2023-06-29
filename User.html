@@ -71,7 +71,8 @@
 
             
             <div class="tabe"  >
-                <div class="card"onclick="newComp();" >
+                <div class="card" onclick="newComp();" >
+                    <h2>لتسجيل على المسابقة :</h2>
                     <h3>رمضان</h3>
                     <p>
                         تاريخ انتهاء التسجيل : 15/8/2023
@@ -95,7 +96,7 @@
                               <th>اسم المسابقة</th>
                               <th>الاجزاء</th>
                               <th>الفرع</th>
-                              <th>العلامة</th>
+                              <th class="flitter" >العلامة<ion-icon name="swap-vertical-outline"></ion-icon></th>
                               <th >التاريخ</th>
                             </tr>
                         </thead>
@@ -213,6 +214,8 @@
                     
                     <form action="" class="flexDetailsInput">
 
+                        <!-- 1 -->
+
                         <div class="flexDetails  activeQ">
                             <label for="">هل سبرتي بالاوقاف؟</label>
                             <div class="radio" >
@@ -227,6 +230,7 @@
                             </div>   
                         </div>
 
+                        <!-- 2 -->
                         <div class="flexDetails  inactiveQ" id="sounded-q2 " data-goto="3">
                             <label for="">ما هي الاجزاء التي سبرتيها ؟</label>
                             <div class="sounded" id="soundedQ">
@@ -267,34 +271,34 @@
                             
                         </div>
 
-                     
+                     <!-- 3 -->
                         <div class="flexDetails  inactiveQ">
                             <label for="">ما هو الفرع الذي سوف تشاركين به بالمسابقة ؟</label>
                             <div class="" >
                                 <p>الاجزاء</p>
                                 <select class="" >
-                                    <option value="1" data-goto="5">ثلاثة اجزاء</option>
-                                    <option value="2" data-goto="6"> خمسة اجزاء</option>
-                                    <option value="3" data-goto="7"> العشر الاجزاء</option>
-                                    <option value="4" data-goto="9">خمسة عشرة جزء  </option>
-                                    <option value="5" data-goto="8">العشرون جزء </option>
-                                    <option value="6" data-goto="10">القرآن كامل</option>
+                                    <option value="1" data-goto="4">ثلاثة اجزاء</option>
+                                    <option value="2" data-goto="5"> خمسة اجزاء</option>
+                                    <option value="3" data-goto="6"> العشر الاجزاء</option>
+                                    <option value="4" data-goto="8">خمسة عشرة جزء  </option>
+                                    <option value="5" data-goto="7">العشرون جزء </option>
+                                    <option value="6" data-goto="9">القرآن كامل</option>
                                 </select>
                             </div>
                             
                         </div>
                         
-
+                        <!-- 4 -->
                         <div class="flexDetails  inactiveQ">
                             <label for="">ما هي الاجزاء الذي سوف تشاركين بها بالمسابقة ؟</label>
                             <div class="" >
                                 <p> ادخل الاجزاء </p>
-                               <input type="text">
+                               <input type="text" data-goto="10">
                             </div>
                             
                         </div>
 
-
+                        <!-- 5 -->
                         <div class="flexDetails  inactiveQ">
                             <label for="">ما هي الاجزاء الذي سوف تشاركين بها بالمسابقة ؟</label>
                             <div class="" >
@@ -310,7 +314,7 @@
                             </div>
                             
                         </div>
-
+                        <!-- 6 -->
                         <div class="flexDetails  inactiveQ">
                             <label for="">ما هي الاجزاء الذي سوف تشاركين بها بالمسابقة ؟</label>
                             <div class="" >
@@ -323,7 +327,7 @@
                             </div>
                             
                         </div>
-
+                        <!-- 7 -->
                         <div class="flexDetails  inactiveQ">
                             <label for="">ما هي الاجزاء الذي سوف تشاركين بها بالمسابقة ؟</label>
                             <div class="" >
@@ -335,7 +339,7 @@
                             </div>
                             
                         </div>
-
+                        <!-- 8 -->
                         <div class="flexDetails  inactiveQ">
                             <label for="">ما هي الاجزاء الذي سوف تشاركين بها بالمسابقة ؟</label>
                             <div class="" >
@@ -347,7 +351,7 @@
                             </div>
                             
                         </div>
-
+                        <!-- 9 -->
                         <div class="flexDetails  inactiveQ" >
                             <label for="">ما هي الاجزاء الذي سوف تشاركين بها بالمسابقة ؟</label>
                             <div class="" >
@@ -362,7 +366,7 @@
                                 </select>
                             </div>
                         </div>
-
+                        <!-- 10 -->
                         <div class="flexDetails  inactiveQ" >
                             <div>
                                 <p>في اي فترة ستشاركين</p>
@@ -378,7 +382,7 @@
                                 </div> 
                             </div>
                         </div>
-                        
+                        <!-- 11 -->
                         <div class="flexDetails  inactiveQ">
                             <div>
                                 <p> تم الانتهاء من التسجيل بنجاح</p>

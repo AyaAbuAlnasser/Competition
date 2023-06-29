@@ -76,7 +76,7 @@
             <div class="moreDetails">
               <div class="userDetailsSection" id="template" >
                 
-                  
+                  <form action="">
                     <p id="UserName" class="UserName">الاسم :</p>
                     <label for="UserName" class="UserNameLable">Aya Abu Alnasser</label>
                 
@@ -95,8 +95,11 @@
                   <p id="supervisor" class="supervisor" >المشرفة :</p>
                   <label for="supervisor" class="supervisorLabele" >Manal</label>
    
-                  <ion-icon name="create-outline"  onclick="editUserDetails()"></ion-icon>
+                  <ion-icon name="create-outline" class="editIconMoreDetails" onclick="editUserDetails()"></ion-icon>
+                  <ion-icon name="save-outline" class="saveMoreDetails"></ion-icon>
                
+                  </form>
+                
               </div>
              </div>
 
@@ -105,13 +108,15 @@
 
           <div class="probe" >
             <div class="probeDetails" >
-              <p id="PartName" class="PartName">جزء :</p>
-              <label for="PartName" class="UserPartLable">1/2/3</label>
-              <p id="Mark" class="MarkName">العلامة :</p>
-              <label for="Markd" class="MarkdLable">95</label>
-              <p id="Date" class="Date" >التاريخ :</p>
-              <label for="Date" class="DateLable" >2/8/2022</label>
-              <ion-icon name="create-outline" class="icon" onclick="editProbe()"></ion-icon>
+              <form action="">
+                <p id="PartName" class="PartName">الاجزاء :</p>
+                <label for="PartName" class="UserPartLable">1/2/3</label>
+                <p id="Date" class="Date" >التاريخ :</p>
+                <label for="Date" class="DateLable" >2/8/2022</label>
+                <ion-icon name="create-outline" class="icon editIconprobe" onclick="editProbe()"></ion-icon>
+                <ion-icon name="save-outline" class="saveProbe" ></ion-icon>
+              </form>
+              
             </div>
           </div>
 
@@ -289,7 +294,7 @@
        const newItem4 = document.createElement('input');
        Item4.parentNode.replaceChild(newItem4, Item4);
 
-     
+       onEditMoreDetails();
      
     };
 
@@ -299,15 +304,39 @@
       const newItem5 = document.createElement('input');
       Item5.parentNode.replaceChild(newItem5, Item5);
 
-      const Item6 = document.querySelector(".MarkdLable");
-      const newItem6 = document.createElement('input');
-      Item6.parentNode.replaceChild(newItem6, Item6);
-
       const Item7 = document.querySelector(".DateLable");
       const newItem7 = document.createElement('input');
       newItem7.setAttribute("type", "date");
       Item7.parentNode.replaceChild(newItem7, Item7);
+
+      onEditProbe();
     }
+
+
+
+
+    function offEditProbe() {
+      document.querySelector(".saveProbe").style.display= "none";
+      document.querySelector(".editIconprobe").style.display= "block";
+      
+    }
+
+    function onEditProbe() {
+      document.querySelector(".saveProbe").style.display= "block";
+      document.querySelector(".editIconprobe").style.display= "none";
+      
+  }
+  
+  function offEditMoreDetails() {
+      document.querySelector(".saveMoreDetails").style.display= "none";
+      document.querySelector(".editIconMoreDetails").style.display= "block";
+      
+    }
+
+    function onEditMoreDetails() {
+      document.querySelector(".saveMoreDetails").style.display= "block";
+      document.querySelector(".editIconMoreDetails").style.display= "none";
+  }
   </script>
 </body>
 </html>

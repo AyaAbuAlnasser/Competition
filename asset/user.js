@@ -13,6 +13,7 @@ function nextQ()
         }   
     } catch (error) {
         alert('عليك اختيار جواب')
+        console.error(error);
         return;
     }
 
@@ -30,7 +31,13 @@ function nextQ()
     nextQ.classList.add("activeQ");
 };
 
-function nextQSelect(currentQ, input){
+function nextQSelect(currentQ, input) {
+    if(input.tagName === 'INPUT') {
+        if(input.value == ''){
+            throw new Error('enter value');
+        }
+        return input.getAttribute('data-goto');
+    }
     return input.querySelector(':checked').getAttribute('data-goto');
 }
 
